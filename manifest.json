@@ -9,6 +9,10 @@
 		"scripts": ["background.js"],
 		"persistent": true
 	},
+	
+	"browser_action": {
+		
+	},
 
 	"content_scripts": [
 		{
