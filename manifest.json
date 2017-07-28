@@ -1,0 +1,33 @@
+{
+	"manifest_version": 2,
+
+	"name": "LinkedIn Job Filter",
+	"description": "Additional filtering and other cosmetic changes for the LinkedIn job interface.",
+	"version": "1.0",
+
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": true
+	},
+
+	"content_scripts": [
+		{
+			"matches": [
+				"https://*.linkedin.com/*"
+			],
+			"js" : [
+				"helpers.js",
+				"filter.js"
+			]
+		}
+	],
+
+	"permissions": [
+		"webRequest",
+		"webRequestBlocking",
+		"activeTab",
+		"tabs",
+		"https://*.linkedin.com/*",
+		"https://*.detectlanguage.com/*"
+	]
+}
